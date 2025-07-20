@@ -1,0 +1,44 @@
+.quarto-title-block .quarto-title-banner {
+  height: 350px !important;
+  min-height: 350px !important;
+  display: flex !important;
+  align-items: center !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  position: relative !important;
+}
+
+#title-block-header {
+  min-height: 350px !important;
+}
+
+.quarto-title-banner .quarto-title {
+  padding: 80px 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 100% !important;
+  width: 100% !important;
+  transform: translateY(-30px) !important;
+}
+
+.quarto-title-banner .quarto-title h1.title {
+  font-size: 2.5rem !important;
+  font-weight: 700 !important;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.8) !important;
+  color: white !important;
+  margin: 0 0 10px 0 !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+.quarto-title-banner .quarto-title .subtitle {
+  font-size: 1.2rem !important;
+  font-weight: 400 !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important;
+  color: white !important;
+  margin: 0 !important;
+  text-align: center !important;
+  width: 100% !important;
+}
