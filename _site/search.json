@@ -1,0 +1,132 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Modélisation de la granulométrie et des faciès d’habitat sur les rivières à saumon du Québec",
+    "section": "",
+    "text": "Bonjour et bienvenue\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Présentation"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "change_code_names.html",
+    "href": "change_code_names.html",
+    "title": "Modélisation de la granulométrie et des faciès d’habitat sur les rivières à saumon du Québec",
+    "section": "",
+    "text": "Code\nfrom bs4 import BeautifulSoup\n\n\n\n\nCode\ndef modifier_multiples_titres(fichier_html, modifications):\n    \"\"\"\n    Modifie plusieurs titres de balises &lt;summary&gt; en une seule fois\n\n    Args:\n        fichier_html (str): Chemin vers le fichier HTML\n        modifications (dict): Dictionnaire {id_section: nouveau_titre}\n    \"\"\"\n\n    # Lire le fichier HTML\n    with open(fichier_html, 'r', encoding='utf-8') as f:\n        contenu = f.read()\n\n    # Parser le HTML avec BeautifulSoup\n    soup = BeautifulSoup(contenu, 'html.parser')\n\n    for heading in soup.find_all('div', class_='quarto-title-meta-heading'):\n        if heading.get_text().strip() == 'Author':\n            heading.string = 'Auteur :'\n\n        elif heading.get_text().strip() == 'Published':\n            heading.string = 'Publié le :'\n\n    modifications_reussies = []\n    modifications_echouees = []\n\n    for id_section, nouveau_titre in modifications.items():\n        # Trouver l'élément avec l'ID spécifié\n        section = soup.find(id=id_section)\n\n        if section is None:\n            modifications_echouees.append(f\"ID '{id_section}' non trouvé\")\n            continue\n\n        # Chercher la balise &lt;summary&gt; dans cette section\n        summary = section.find('summary')\n\n        if summary is None:\n            modifications_echouees.append(f\"Pas de &lt;summary&gt; dans '{id_section}'\")\n            continue\n\n        # Modifier le contenu\n        summary.string = nouveau_titre\n        modifications_reussies.append(f\"'{id_section}' -&gt; '{nouveau_titre}'\")\n\n    # Sauvegarder le fichier modifié\n    with open(fichier_html, 'w', encoding='utf-8') as f:\n        f.write(str(soup))\n\n    # Afficher les résultats\n    if modifications_reussies:\n        print(\"Modifications réussies :\")\n        for modif in modifications_reussies:\n            print(f\"  ✓ {modif}\")\n\n    if modifications_echouees:\n        print(\"Modifications échouées :\")\n        for echec in modifications_echouees:\n            print(f\"  ✗ {echec}\")\n\n\n\n\nCode\nnouveaux_titres = {\"import\": \"Code pour l'import des librairies\",\n                   \"graph\": \"Code de création du graphique\",\n                   \"map\": \"Code de création de la carte\",\n                   \"cell-image\": \"Code de l'affichage de l'image\"}\n\nmodifier_multiples_titres('index.html', nouveaux_titres)\n\n\nModifications réussies :\n  ✓ 'import' -&gt; 'Code pour l'import des librairies'\n  ✓ 'graph' -&gt; 'Code de création du graphique'\n  ✓ 'cell-image' -&gt; 'Code de l'affichage de l'image'\nModifications échouées :\n  ✗ ID 'map' non trouvé\n\n\n\n\nCode"
+  },
+  {
+    "objectID": "methodologie/methodologie.html",
+    "href": "methodologie/methodologie.html",
+    "title": "Allo",
+    "section": "",
+    "text": "Allo\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Méthodologie"
+    ]
+  },
+  {
+    "objectID": "methodologie/vhgm/vhgm.html",
+    "href": "methodologie/vhgm/vhgm.html",
+    "title": "Allo",
+    "section": "",
+    "text": "Allo",
+    "crumbs": [
+      "Méthodologie",
+      "Allo"
+    ]
+  },
+  {
+    "objectID": "methodologie/modele_pred/modele_pred.html",
+    "href": "methodologie/modele_pred/modele_pred.html",
+    "title": "Allo",
+    "section": "",
+    "text": "Allo",
+    "crumbs": [
+      "Méthodologie",
+      "Allo"
+    ]
+  },
+  {
+    "objectID": "introduction/introduction.html",
+    "href": "introduction/introduction.html",
+    "title": "Allo",
+    "section": "",
+    "text": "Allo\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "resultats/resultats.html",
+    "href": "resultats/resultats.html",
+    "title": "Allo",
+    "section": "",
+    "text": "Allo\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Résultats"
+    ]
+  },
+  {
+    "objectID": "methodologie/pente/pente.html",
+    "href": "methodologie/pente/pente.html",
+    "title": "Allo",
+    "section": "",
+    "text": "Allo",
+    "crumbs": [
+      "Méthodologie",
+      "Allo"
+    ]
+  },
+  {
+    "objectID": "methodologie/donnees/donnees.html",
+    "href": "methodologie/donnees/donnees.html",
+    "title": "Allo",
+    "section": "",
+    "text": "Allo",
+    "crumbs": [
+      "Méthodologie",
+      "Allo"
+    ]
+  },
+  {
+    "objectID": "methodologie/terrain/terrain.html",
+    "href": "methodologie/terrain/terrain.html",
+    "title": "Allo",
+    "section": "",
+    "text": "Allo",
+    "crumbs": [
+      "Méthodologie",
+      "Allo"
+    ]
+  },
+  {
+    "objectID": "bibliographie/bibliographie.html",
+    "href": "bibliographie/bibliographie.html",
+    "title": "Mémoire de maîtrise de Mathias Chabal",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "Bibliographie"
+    ]
+  },
+  {
+    "objectID": "conclusion/conclusion.html",
+    "href": "conclusion/conclusion.html",
+    "title": "Mémoire de maîtrise de Mathias Chabal",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "Conclusion",
+      "conclusion.html"
+    ]
+  }
+]

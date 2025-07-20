@@ -2,20 +2,54 @@ project:
   type: website
 
 website:
-  title: "memoire"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+  title: "Mémoire de maîtrise de Mathias Chabal"
+  back-to-top-navigation: true
+  page-footer: "<span style='display: inline-flex; align-items: center; gap: 8px;'><img src='data/licence_cc_by_nc.webp' alt='Licence CC BY NC' height='15'> Mathias Chabal, 2025</span>"
+  sidebar:
+    style: "floating"
+    search: true
+    contents:
+      - text: "Présentation"
+        href: index.qmd
+
+      - section: "Introduction"
+        contents: 
+          - introduction/introduction.qmd
+
+      - section: "Méthodologie"
+        contents:
+          - methodologie/modele_pred/modele_pred.qmd
+          - methodologie/terrain/terrain.qmd
+          - methodologie/donnees/donnees.qmd
+          - methodologie/vhgm/vhgm.qmd
+          - methodologie/pente/pente.qmd
+        
+      - section: "Résultats"
+        contents: 
+          - resultats/resultats.qmd
+
+      - section: "Conclusion"
+        contents: 
+          - conclusion/conclusion.qmd
+
+      - section: "Bibliographie"
+        contents: 
+          - bibliographie/bibliographie.qmd
 
 format:
   html:
-    theme:
-      - cosmo
-      - brand
-    css: styles.css
+    css: styles/lux_style.css
+    smooth-scroll: true
+    code-fold: true
+    respect-user-color-scheme: true
     toc: true
+    toc-location: right
+    toc-title: "Table des matières"
+    page-layout: full
+    warning: false
+    error: false
+
+output-file: index.html
 
 
 

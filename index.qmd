@@ -1,7 +1,9 @@
 ---
-title: "memoire"
+title: "Modélisation de la granulométrie et des faciès d’habitat sur les rivières à saumon du Québec"
+subtitle: "Mémoire de maîtrise"
+author: "Mathias Chabal"
+date: 2024-07-19
 ---
 
-This is a Quarto website.
+# Bonjour et bienvenue
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
