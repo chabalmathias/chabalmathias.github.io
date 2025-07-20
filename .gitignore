@@ -1,7 +1,7 @@
 /.DS_Store
-change_code_names.ipynb
 /.quarto/
 data/.DS_Store
 introduction/.DS_Store
 .gitignore
 introduction/data/.DS_Store
+/change_code_names.ipynb
